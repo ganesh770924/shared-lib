@@ -1,5 +1,5 @@
 def checkout(Map Stageparams){
-git branch: 'master', credentialsId: 'githublogin', url: 'git@github.com:satyam146/test2.git'
+git branch: 'master', credentialsId: 'cicddemoaccesstoken', url: 'https://github.com/ganesh770924/CICDrepo.git'
 }
 
 def build(){
@@ -39,7 +39,7 @@ def deploy(){
    deploy adapters: 
   [tomcat9(credentialsId: 'tomcat',
  
-   url: 'http://3.109.183.122:8006')],
+   url: 'http://15.206.167.30:8080')],
    contextPath: 'demo',
    onFailure: false,
    war: '**/target/*.war' 
