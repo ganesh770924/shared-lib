@@ -14,7 +14,7 @@ def sonarscanner(Closure body={}){
                    -Dsonar.projectName=CI-CD_Jenkins \
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=src/ \
-                   -Dsonar.java.binaries=/var/lib/jenkins/workspace/cicdpipeline/target/test-classes/com/javatechie'''
+                   -Dsonar.java.binaries=/var/lib/jenkins/workspace/cicdpipeline/target'''
                }
 
 def upartifacts(Closure body={}){
