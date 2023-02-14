@@ -1,15 +1,15 @@
-def checkout(){
+def checkout(Closure body={}){
 git branch: 'master', credentialsId: 'cicddemoaccesstoken', url: 'https://github.com/ganesh770924/CICDrepo.git'
 }
 
-def build(){
+def build(Closure body={}){
  sh "mvn clean install package -DskipTests"
     }
 
-def test(){
+def test(Closure body={}){
  junit(testResults: 'target/surefire-reports/*.xml', allowEmptyResults : true)
 }
-def sonarscanner(){
+def sonarscanner(Closure body={}){
                  sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=CI_Jenkins \
                    -Dsonar.projectName=CI-CD_Jenkins \
                    -Dsonar.projectVersion=1.0 \
@@ -17,7 +17,7 @@ def sonarscanner(){
                    -Dsonar.java.binaries=/var/lib/jenkins/workspace/CI-CD/target/test-classes/com/example/demo '''
                }
 
-def upartifacts(){
+def upartifacts(Closure body={}){
   rtUpload (
                     // Obtain an Artifactory server instance, defined in Jenkins --> Manage Jenkins --> Configure System:
                     serverId: SERVER_ID,
@@ -35,7 +35,7 @@ def upartifacts(){
                   )
 }
 
-def deploy(){
+def deploy(Closure body={}){
    deploy adapters: 
   [tomcat9(credentialsId: 'tomcat',
  
