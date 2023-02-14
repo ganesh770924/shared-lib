@@ -1,4 +1,4 @@
-def checkout(Map Stageparams){
+def mycheckout(Map Stageparams){
 git branch: 'master', credentialsId: 'cicddemoaccesstoken', url: 'https://github.com/ganesh770924/CICDrepo.git'
 }
 
