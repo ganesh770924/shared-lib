@@ -13,7 +13,8 @@ def sonarscanner(Closure body={}){
                  sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=CI_Jenkins \
                    -Dsonar.projectName=CI-CD_Jenkins \
                    -Dsonar.projectVersion=1.0 \
-                   -Dsonar.sources=src/ '''
+                   -Dsonar.sources=src/
+                    -Dsonar.java.binaries=/var/jenkins_home/workspace/cicdpipeline/target/classes  '''
                     
                }
 
