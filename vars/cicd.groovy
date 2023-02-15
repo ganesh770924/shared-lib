@@ -1,5 +1,5 @@
 def checkout(Closure body={}){
-git branch: 'master', credentialsId: 'cicddemoaccesstoken', url: 'https://github.com/ganesh770924/CICDrepo.git'
+git branch: 'main', credentialsId: 'cicddemoaccesstoken', url: 'https://github.com/ganesh770924/CICDtestrepo.git'
 }
 
 def build(Closure body={}){
