@@ -14,7 +14,7 @@ def sonarscanner(Closure body={}){
                    -Dsonar.projectName=CI-CD_Jenkins \
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=src/
-                    -Dsonar.java.binaries=/var/jenkins_home/workspace/cicdpipeline/target/testclasses/com/dev3l/hello_world/test  '''
+                    -Dsonar.java.binaries=/var/jenkins_home/workspace/cicdpipeline/target/testclasses/com/dev3l/hello_world/test/ExampleTest.class '''
                     
                }
 
